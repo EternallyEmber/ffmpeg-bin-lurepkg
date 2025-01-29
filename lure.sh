@@ -8,7 +8,7 @@ architectures=('amd64' 'arm64')
 license=('custom')
 provides=('ffmpeg')
 
-deps_ubuntu=('libavcodec-dev' 'libavdevice-dev' 'libavfilter-dev' 'libavformat-dev' 'libavutil-dev' 'libpostproc-dev' 'libswresample-dev' 'libswscale-dev')
+deps_ubuntu=('libavcodec-dev' 'libavcodec61' 'libavdevice-dev' 'libavdevice61' 'libavfilter-dev' 'libavfilter10' 'libavformat-dev' 'libavfilter10' 'libavformat-dev' 'libavformat61' 'libavutil-dev' 'libavutil59' 'libpostproc-dev' 'libpostproc58' 'libswresample-dev' 'libswresample5' 'libswscale-dev' 'libswscale8')
 
 sources_arm64=("https://github.com/EternallyEmber/FFmpeg-Builds/releases/download/latest/ffmpeg-n${version}-latest-linuxarm64-nonfree-shared-${version}.tar.xz")
 checksums_arm64=("SKIP")
