@@ -19,7 +19,7 @@ package() {
 	install -Dm755 "${srcdir}/*/bin/ffmpeg" "${pkgdir}/usr/bin/ffmpeg"
 	install -Dm755 "${srcdir}/*/bin/ffplay" "${pkgdir}/usr/bin/ffplay"
 	install -Dm755 "${srcdir}/*/bin/ffprobe" "${pkgdir}/usr/bin/ffprobe"
-	install -Dm644 "${srcdir}/*/lib/*.so*" "${pkgdir}/usr/lib/*.so*"
-	install -Dm444 "${srcdir}/*/include/*/*.h" "${pkgdir}/usr/local/include/*/*.h"
+	for f in ${srcdir}/*/lib/*.so*; do install -Dm644 -t ${pkgdir}/usr/lib/ $f; done
+	for f in ${srcdir}/*/include/*/*.h; do install -Dm444 -t ${pkgdir}/usr/include/ $f; done
 	install -Dm644 "${srcdir}/*/LICENSE.txt" "${pkgdir}/usr/share/licenses/ffmpeg/LICENSE.txt"
 }
