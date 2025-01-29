@@ -1,4 +1,4 @@
-name='ffmpeg-bin'
+name='ffmpeg'
 version='7.1'
 release='1'
 desc='A complete, cross-platform solution to record, convert and stream audio and video.'
@@ -6,8 +6,7 @@ homepage='https://www.ffmpeg.org/'
 maintainer="Ember Profet <ember.profet@outlook.com>"
 architectures=('amd64' 'arm64')
 license=('custom')
-provides=('ffmpeg-bin')
-conflicts=('ffmpeg' 'ffmpeg-git')
+provides=('ffmpeg' 'libavcodec61' 'libavdevice61' 'libavfilter10' 'libavformat61' 'libavutil59' 'libpostproc58' 'libswresample5' 'libswscale8')
 
 sources_arm64=("https://github.com/EternallyEmber/FFmpeg-Builds/releases/download/latest/ffmpeg-n${version}-latest-linuxarm64-nonfree-shared-${version}.tar.xz")
 checksums_arm64=("SKIP")
