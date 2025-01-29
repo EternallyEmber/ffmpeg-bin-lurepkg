@@ -16,10 +16,10 @@ sources_amd64=("https://github.com/EternallyEmber/FFmpeg-Builds/releases/downloa
 checksums_amd64=("SKIP")
 
 package() {
-	install -Dm755 "${srcdir}/bin/ffmpeg" "${pkgdir}/usr/bin/ffmpeg"
-	install -Dm755 "${srcdir}/bin/ffplay" "${pkgdir}/usr/bin/ffplay"
-	install -Dm755 "${srcdir}/bin/ffprobe" "${pkgdir}/usr/bin/ffprobe"
-	install -Dm644 "${srcdir}/lib/*.so*" "${pkgdir}/usr/lib/*.so*"
-	install -Dm444 "${srcdir}/include/*/*.h" "${pkgdir}/usr/local/include/*/*.h"
-	install -Dm644 "${srcdir}/LICENSE.txt" "${pkgdir}/usr/share/licenses/ffmpeg/LICENSE.txt"
+	install -Dm755 "${srcdir}/*/bin/ffmpeg" "${pkgdir}/usr/bin/ffmpeg"
+	install -Dm755 "${srcdir}/*/bin/ffplay" "${pkgdir}/usr/bin/ffplay"
+	install -Dm755 "${srcdir}/*/bin/ffprobe" "${pkgdir}/usr/bin/ffprobe"
+	install -Dm644 "${srcdir}/*/lib/*.so*" "${pkgdir}/usr/lib/*.so*"
+	install -Dm444 "${srcdir}/*/include/*/*.h" "${pkgdir}/usr/local/include/*/*.h"
+	install -Dm644 "${srcdir}/*/LICENSE.txt" "${pkgdir}/usr/share/licenses/ffmpeg/LICENSE.txt"
 }
