@@ -6,7 +6,7 @@ homepage='https://www.ffmpeg.org/'
 maintainer="Ember Profet <ember.profet@outlook.com>"
 architectures=('amd64' 'arm64')
 license=('custom')
-provides=('ffmpeg' 'libavcodec-dev' 'libavcodec61' 'libavcodec-' 'libavdevice61' 'libavfilter10' 'libavformat61' 'libavutil59' 'libpostproc58' 'libswresample5' 'libswscale8')
+provides=('ffmpeg')
 
 sources_arm64=("https://github.com/EternallyEmber/FFmpeg-Builds/releases/download/latest/ffmpeg-n${version}-latest-linuxarm64-nonfree-${version}.tar.xz")
 checksums_arm64=("SKIP")
