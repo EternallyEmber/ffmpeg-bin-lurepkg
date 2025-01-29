@@ -15,6 +15,6 @@ sources_amd64=("https://github.com/EternallyEmber/FFmpeg-Builds/releases/downloa
 checksums_amd64=("SKIP")
 
 package() {
-	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/bin/*; do install -Dm755 -t ${pkgdir}/usr/bin/ $f; done
-	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/man; do install -Dm755 -t ${pkgdir}/usr/local/share/man $f; done
+	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/bin/*; do install -Dm755 $f -t ${pkgdir}/usr/bin/; done
+	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/man; do install -Dm755 $f -t ${pkgdir}/usr/local/share/man; done
 }
