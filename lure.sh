@@ -17,5 +17,4 @@ checksums_amd64=("SKIP")
 package() {
 	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/bin/*; do install -Dm755 -t ${pkgdir}/usr/bin/ $f; done
 	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/man/*; do install -Dm755 -t ${pkgdir}/usr/local/share/man $f; done
-	for f in ${srcdir}/ffmpeg-n${version}-latest-*-nonfree-${version}/LICENSE.txt; do install -Dm644 -t ${pkgdir}/usr/share/licenses/ffmpeg/LICENSE.txt $f; done
 }
